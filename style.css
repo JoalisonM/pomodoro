@@ -1,0 +1,267 @@
+/*opcao no futuro background: rgba(0, 0, 0, 0.15);*/
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/*links*/
+a {
+    text-decoration: none;
+    color: #fff;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+
+    background: rgba(219, 82, 82, 7);
+    color: #fff ;
+}
+
+header {
+    padding: 1rem 0 1rem;
+    text-align: center;
+}
+
+div.navbar {
+    max-width: 620px;
+    margin: auto;
+}
+
+nav {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+ header nav ul,
+ header nav li {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+header nav li {
+    margin-right: 0.7rem;
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.5rem 0.75rem;
+    border-radius: 0.25rem;
+}
+
+header nav ul {
+    display: flex;
+    font-size: 0.8rem;
+}
+
+nav #logo {
+    font-size: 1.3rem;
+    font-weight: 700;
+}
+
+nav #logo img {
+    margin-right: 0.3rem;
+}
+
+nav a {
+    color: #fff;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+nav ul li a {
+    opacity: 0.8;
+}
+
+nav ul li a:hover {
+    opacity: 1;
+} 
+
+nav ul li a img {
+    margin-right: 0.3rem;
+}
+
+.timer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.progress {
+    width: 620px;
+    height: 0.05rem;
+    margin-bottom: 2.5rem;
+    background-color: rgba(0, 0, 0, 0.1);
+}
+
+.pomodoro {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 0.3rem;
+    padding: 1.5rem 4.4rem;
+    margin-bottom: 2.5rem;
+}
+
+.buttons a {
+    padding: 1rem;
+    font-size: 1rem;
+}
+
+.itsTime {
+    font-size: 7.5rem;
+    font-weight: 700;
+    margin-top: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.started {
+    cursor: pointer;
+    font-size: 1.3rem;
+    font-weight: 600;
+    color: rgba(219, 82, 82, 7) ;
+
+    border: 0;
+    border-radius: 0.25rem;
+    padding: 1rem 4rem;
+    box-shadow: 0 0.3rem 0 #cbccd1;
+}
+
+.tasks {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    text-align: center;
+    width: 30.17rem;
+    font-size: 1.2rem;
+}
+
+.tasks p { 
+    margin-bottom: 1.5rem;
+}
+
+.tasks-topo {
+    display: flex;
+    justify-content: space-between;
+}
+
+.tasks-topo a {
+    background: rgba(255, 255, 255, 0.2);
+    padding: 0.3rem 0.5rem;
+    border-radius: 0.25rem;
+}
+
+.line {
+    margin-top: 0.8rem;
+    height: 0.1rem;
+    margin-bottom: 1rem;
+    background-color: rgba(255, 255, 255, 0.7);
+}
+
+.create-tasks {
+    font-size: 1rem;
+    font-weight: 600;
+    color: #fff;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    border: 0.16rem dashed rgba(255, 255, 255, 0.4);
+    border-radius: 0.8rem;
+    background-color: rgba(0, 0, 0, 0.1);
+    padding: 1.2rem;
+    opacity: 0.8;
+    cursor: pointer;
+}
+
+.create-tasks span {
+    opacity: 0.8;
+}
+
+.create-tasks img {
+    margin-right: 0.5rem;
+    opacity: 0.8;
+}
+
+.create-tasks:hover {
+    opacity: 1;
+}
+
+.modal-overlay {
+    width: 100%;
+    height: 100%;
+
+    background-color: rgba(0,0,0,0.7);
+
+    position: fixed;
+    top: 0;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    opacity: 0;
+    visibility: hidden;
+
+    z-index: 999;
+}
+
+.modal-overlay.active {
+    opacity: 1;
+    visibility:visible;
+}
+
+.modal {
+    background: #f0f2f5;
+    padding: 2.4rem;
+
+    position: relative;
+    z-index: 1;
+}
+
+.form {
+    max-width: 500px;
+}
+
+.form h2 {
+    margin-top: 0;
+}
+
+input {
+    border: none;
+    border-radius: 0.2rem;
+
+    padding: 0.8rem;
+    width: 100%;
+}
+
+input:nth-of-type(1) {
+    margin-bottom: 0.8rem;
+}
+
+.input-group {
+    margin-top: 0.8rem;
+}
+
+.input-group small {
+    margin-top: 0;
+    opacity: 0.4;
+}
+
+.input-group.actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 0;
+}
+
+.input-group.actions a,
+.input-group.actions button {
+    width: 48%;
+}

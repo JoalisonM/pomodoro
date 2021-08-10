@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro</title>
+
+    <link rel="stylesheet" href="./style.css">
+    <link rel="icon" type="image/png" sizes="32x32" href="assets/images/checkmark.png">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;500;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <header>
+        <div class="navbar">
+            <nav>
+                <a href="#" id="logo"> <img src="./assets/images/checkmarkwhite.png" alt="pomofocus icon"> Pomofocus</a>
+                <ul>
+                    <li><a href=""><img src="./assets/images/graphic.png" alt="report icon"> Report </a></li>
+                    <li><a href=""><img src="./assets/images/gear.png" alt="settings icon"> Setting </a></li>
+                    <li><a href=""><img src="./assets/images/user.png" alt="login icon"> Login</a></li>
+                </ul>
+            </nav>
+        </div>
+    </header>
+    <main>
+        <section class="timer">
+            <div class="progress"></div>
+            <div class="pomodoro">
+                <div class="buttons">
+                    <a href="">Pomodoro</a>
+                    <a href="">Short Break</a>
+                    <a href="">Long Break</a>
+                </div>
+                <div class="itsTime">25:00</div>
+                <button class="started" onmousedown="Button.click()" onmouseup="Button.afterClick()">START</button>
+            </div>
+            <div class="tasks">
+                <p>Time to work!</p>
+                <div class="tasks-topo">
+                    Tasks <a href=""><img src="./assets/images/more.png" alt="menu icon"></a>
+                </div>
+                <div class="line"></div>
+                <button class="create-tasks" id="create-tasks" onclick="Modal.open()">
+                    <img src="./assets/images/add-interface-circular-symbol-with-plus-sign.png" alt="plus icon"> 
+                    <span>Add Task</span>
+                </button>
+            </div>
+        </section>
+    </main>
+    <div class="modal-overlay" onclick="Modal.close()">
+        <div class="modal">
+            <div class="form">
+                <form>
+                    <div class="input-group">
+                        <label for="title-task" class="sr-only">Title task</label>
+                        <label for=""></label>
+                        <input 
+                            type="text" 
+                            id="title-task"
+                            placeholder="What are you working on?"
+                        >
+                        <label for="">Est Pomodoros</label>
+                        <input type="number">
+                        <a href="">+ Add Note</a>
+                        <a href="">+ Add Project</a>
+                    </div>
+
+                    <div class="input-group actions">
+                        <a 
+                                href="" 
+                                class="button cancel"
+                                onclick="Modal.close()"
+                        >
+                            Cancelar
+                        </a>
+                        <button>Save</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    <script type="text/javascript" src="./script.js"></script>
+</body>
+</html>
